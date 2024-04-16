@@ -26,7 +26,7 @@ namespace DesignPatterns
             #endregion
 
             #region Strategy
-            //To use when all obects varies between several behaviour dynammically
+            //To use when all obects varies between a behaviour dynammically
             Animal sparky = new Dog();
             Animal kitty = new Cat(); 
             Animal tweety = new Bird();
