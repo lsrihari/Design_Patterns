@@ -43,21 +43,20 @@ namespace DesignPatterns
             #endregion
 
             #region Observer
-            StockGrabber stockGrabber = new StockGrabber();
-            StockObserver stockObserver = new StockObserver(stockGrabber);
-            stockGrabber.setIBMPrice(119);
-            stockGrabber.setApplePrice(675);
-            stockGrabber.setGooglePrice(670);
+            //StockGrabber stockGrabber = new StockGrabber();
 
-            StockObserver stockObserver2 = new StockObserver(stockGrabber);
-            stockGrabber.setIBMPrice(112);
-            stockGrabber.setApplePrice(635);
-            stockGrabber.setGooglePrice(620);
+            //StockObserver stockObserver = new StockObserver(stockGrabber);
+            //StockObserver stockObserver2 = new StockObserver(stockGrabber);
 
-            stockGrabber.unregister(stockObserver);
-            stockGrabber.setIBMPrice(112);
-            stockGrabber.setApplePrice(235);
-            stockGrabber.setGooglePrice(620);
+            //stockGrabber.setIBMPrice(119);
+            //stockGrabber.setApplePrice(675);
+            //stockGrabber.setGooglePrice(670);
+
+            //stockGrabber.unregister(stockObserver2);
+
+            //stockGrabber.setIBMPrice(112);
+            //stockGrabber.setApplePrice(635);
+            //stockGrabber.setGooglePrice(620);
             #endregion
         }
     }

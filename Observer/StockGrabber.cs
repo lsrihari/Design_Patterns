@@ -5,7 +5,7 @@ namespace DesignPatterns.Observer;
 
 internal class StockGrabber : Subject
 {
-    private ArrayList observers =new ArrayList();
+    private List<IObserver> observers =new List<IObserver>();
     private double ibmPrice;
     private double applPrice;
     private double gooPrice;
@@ -19,6 +19,7 @@ internal class StockGrabber : Subject
     {
         int observerIndex=observers.IndexOf(deleteObserver);
         Console.WriteLine("Observer "+ (observerIndex+1)+ " deleted");
+        observers.RemoveAt(observerIndex);
     }
 
     public void notifyObserver()
