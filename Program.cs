@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.Abstract_Factory;
 using DesignPatterns.Abstract_Factory.Helpers;
 using DesignPatterns.Adapter;
+using DesignPatterns.Factory;
 using DesignPatterns.Observer;
 using DesignPatterns.Strategy;
 using DesignPatterns.Strategy.Helpers;
@@ -58,6 +59,34 @@ namespace DesignPatterns
             //stockGrabber.setApplePrice(635);
             //stockGrabber.setGooglePrice(620);
             #endregion
+
+            #region Factory
+            EnemyshipFactory enemyshipFactory = new EnemyshipFactory();
+            EnemeyShip theEnemy = null;
+
+            string ship = Console.ReadLine();
+
+            if (ship != "")
+            {
+                theEnemy = enemyshipFactory.makeEnemyShip(ship);
+            }
+
+            if(theEnemy != null)
+            {
+                doStuffEnemy(theEnemy);
+            }
+            else
+            {
+                Console.WriteLine("Try again...");
+            }
+            #endregion
+        }
+
+        private static void doStuffEnemy(EnemeyShip anEnemyShip)
+        {
+            anEnemyShip.displayEnemyShip();
+            anEnemyShip.followHeroShip();
+            anEnemyShip.enemyShipShoots();
         }
     }
 }
